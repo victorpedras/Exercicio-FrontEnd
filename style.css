@@ -12,7 +12,7 @@ body {
 }
 header {
     padding: 5px;
-    background-color: rgb(245, 245, 190);
+    background-color: #63635a;
 }
 
 nav > ul {
@@ -25,12 +25,18 @@ nav > ul > li {
     margin-left: 10px;
 }
 
+main > ul > li {
+    display: inline-flex;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 h1 {
     font-size: 2.2em;
     padding: 5px;
     padding-bottom: 0px;
     text-align: center;
-    color: #464141;
+    color: white;
 }
 
 h2 {
@@ -47,6 +53,8 @@ h3 {
 }
 
 p {
+    text-align: justify ;
+    max-width: 900px;
     font-size: 1.1em;
     padding: 20px;
     padding-top: 0px;
@@ -57,10 +65,28 @@ a {
     padding: 10px;
     font-size: 1.3em;
     text-decoration: none;
-    color: #464141;
+    color: white;
 }
 
 a:hover {
-    background-color: white;
+    background-color: #443c3c;
     text-decoration: underline;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+footer {
+    background-color: #63635a;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    padding-top: 45px;
+}
+
+footer > p {
+    color: white;
 }
