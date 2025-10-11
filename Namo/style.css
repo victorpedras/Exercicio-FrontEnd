@@ -8,13 +8,15 @@
 }
 
 body {
+    align-items: center;
     height: 100%;
-    display: flex;      
+    display: flex; 
     flex-direction: column; 
-    background-color: #eeeeee;
+    background-color: #e6e6e6;
 }
 
 header {
+    width: 100%;
     padding: 5px;
     background-color: #63635a;
 }
@@ -24,7 +26,9 @@ html {
 }
 
 main {
-  flex: 100%;
+    width: 70%;
+    background-color: #eeeeee;
+    flex-grow: 1;
 }
 
 h1 {
@@ -49,13 +53,16 @@ h3 {
 }
 
 nav > ul {
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+    
 }
 
 nav > ul > li {
-    display: inline-flex;
     margin-right: 10px;
     margin-left: 10px;
+    list-style-type: none;
 }
 
 nav a {
@@ -71,13 +78,16 @@ nav a:hover {
 }
 
 main > ul#img {
-    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    max-height: 300px;
 }
 
 main > ul#img > li {
-    display: inline-flex;
+    box-shadow: 4px 4px 15px #00000049;
     margin-right: 5px;
     margin-left: 5px;
+    list-style-type: none;
 }
 
 main > ul#paises {
@@ -115,6 +125,7 @@ img {
 footer {
     background-color: #63635a;
     padding: 15px;
+    width: 100%;
 }
 
 footer > p {
