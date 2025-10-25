@@ -1,8 +1,12 @@
 @charset "UTF-8";
+:root {
+    --cor-principal: #304D6D;
+    --cor-fundo: #283f58;
+}
 
 * {
     font-family: Arial, Helvetica, sans-serif;
-    color: #464141;
+    color: var(--cor-principal);
     margin: 0px;
     padding: 0px;
 }
@@ -17,8 +21,8 @@ body {
 
 header {
     width: 100%;
-    padding: 5px;
-    background-color: #63635a;
+    /* padding: 5px; */
+    background-color: var(--cor-principal);
 }
 
 html {
@@ -33,7 +37,7 @@ main {
 
 h1 {
     font-size: 2.2em;
-    padding: 5px;
+    padding: 8px 0px;
     padding-bottom: 0px;
     text-align: center;
     color: white;
@@ -41,7 +45,7 @@ h1 {
 
 h2 {
     font-size: 1.8em;
-    color: #464141;
+    color: var(--cor-principal);
     padding: 20px;
     font-weight: bold;
 }
@@ -63,9 +67,12 @@ nav > ul > li {
     margin-right: 10px;
     margin-left: 10px;
     list-style-type: none;
+    color: black;
 }
 
 nav a {
+    position: relative;
+    font-weight: 700;
     border-radius: 8px;
     padding: 10px;
     font-size: 1.3em;
@@ -74,7 +81,21 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #444444;
+    background-color: white;
+    color: var(--cor-principal);
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60%;
+    border-radius: 3px;
+    background-color: var(--cor-principal);
 }
 
 main > ul#img {
@@ -95,12 +116,16 @@ main > ul#paises {
     font-size: 1.1em;
 }
 
+main > ul#paises > li {
+    color: black;
+}
 main > p {
     text-align: justify;
     max-width: 900px;
     font-size: 1.1em;
     padding: 20px;
     padding-top: 0px;
+    color: black;
 }
 
 main > a {
@@ -112,7 +137,7 @@ main > a {
 }
 
 main a:hover {
-    background-color: #443c3c;
+    background-color: var(--cor-principal);
     text-decoration: underline;
 }
 
@@ -123,8 +148,8 @@ img {
 
 
 footer {
-    background-color: #63635a;
-    padding: 15px;
+    background-color: var(--cor-principal);
+    padding: 15px 0px; 
     width: 100%;
 }
 
