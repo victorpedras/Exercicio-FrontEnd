@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosso Site</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -33,15 +32,53 @@
             Conheço o Victor desde os meus 7 anos e ele é meu namorado desde os meus 15 anos. 
         </p>
         <h2>Nos conheça</h2>
-        <ul id="img">
-            <li><img src="imagens/2.png" alt="Foto de Victor e Maria"></li>
-            <li><img src="imagens/3.png" alt="Foto de Victor e Maria"></li>
-            <li><img src="imagens/4.png" alt="Foto de Victor e Maria"></li>
-            <li><img src="imagens/5.png" alt="Foto de Victor e Maria"></li>
-        </ul>
+        
+        <div class="carousel">
+            <ul id="img">
+                <li><img src="imagens/1.png" alt="Foto 1 de Victor e Maria"></li>
+                <li><img src="imagens/2.png" alt="Foto 2 de Victor e Maria"></li>
+                <li><img src="imagens/3.png" alt="Foto 3 de Victor e Maria"></li>
+                <li><img src="imagens/4.png" alt="Foto 4 de Victor e Maria"></li>
+                <li><img src="imagens/5.png" alt="Foto 5 de Victor e Maria"></li>
+                <li><img src="imagens/6.png" alt="Foto 6 de Victor e Maria"></li>
+                <li><img src="imagens/7.png" alt="Foto 7 de Victor e Maria"></li>
+                <li><img src="imagens/8.png" alt="Foto 8 de Victor e Maria"></li>
+            </ul>
+        </div>
     </main>
     <footer>
         <p>Desenvovido por <a id="footer" href="https://github.com/victorpedras" target="_blank">Victor Fernandes Ribeiro Pedras</a></p>
     </footer>
+
+    <!-- Botão flutuante -->
+    <button id="btn-feedback">💬</button>
+
+    <!-- Formulário flutuante -->
+    <div id="feedback-box">
+        <form id="feedback-form">
+            <button type="button" id="close-feedback">✕</button>
+            
+            <h3>Sugestão para o site</h3>
+
+            <label>
+                Nome
+                <input type="text" id="nome" required>
+            </label>
+
+            <label>
+                Email
+                <input type="email" id="email" required>
+            </label>
+
+            <label>
+                Sugestão
+                <textarea id="sugestao" rows="4" required></textarea>
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

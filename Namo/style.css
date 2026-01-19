@@ -21,7 +21,7 @@ body {
 
 header {
     width: 100%;
-    /* padding: 5px; */
+    padding: 5px auto; 
     background-color: var(--cor-principal);
 }
 
@@ -50,7 +50,7 @@ h2 {
     font-weight: bold;
 }
 
-h3 {
+ main > h3 {
     font-size: 1.5em;
     padding: 5px;
     padding-left: 20px;
@@ -98,17 +98,32 @@ nav a:hover::after {
     background-color: var(--cor-principal);
 }
 
-main > ul#img {
-    display: flex;
-    justify-content: center;
-    max-height: 300px;
+main > .carousel {
+    width: 100%;
+    max-width: 1240px;
+    margin: 10px auto;
+    overflow: hidden;
 }
 
-main > ul#img > li {
-    box-shadow: 4px 4px 15px #00000049;
-    margin-right: 5px;
-    margin-left: 5px;
-    list-style-type: none;
+main > .carousel > ul#img {
+    display: flex;
+    list-style: none;
+    transition: transform 0.6s ease;
+    padding: 0;
+    margin: 0;
+}
+
+main > .carousel > ul#img > li {
+    width: 25%; 
+    padding: 5px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+main > .carousel > ul#img > li > img {
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 main > ul#paises {
@@ -161,4 +176,88 @@ footer > p {
 
 footer > p > a {
     color: white;
+}
+
+
+/* Botão flutuante */
+#btn-feedback {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-principal);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Botão fechar formulário */
+#close-feedback {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--cor-principal);
+}
+
+/* Caixa do formulário */
+#feedback-box {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 260px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 15px;
+    display: none;
+    z-index: 1000;
+}
+
+/* Formulário */
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#feedback-form h3 {
+    text-align: center;
+    color: var(--cor-principal);
+}
+
+#feedback-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    color: black;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+}
+
+#feedback-form button {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#feedback-form button:hover {
+    opacity: 0.9;
 }
